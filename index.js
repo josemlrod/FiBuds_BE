@@ -1,5 +1,5 @@
 const { getApp } = require("./app");
 
-getApp().listen(11235, _ => {
+getApp().listen(process.env.PORT || 11235, _ => {
   console.log("Server is running on port #11235");
 });

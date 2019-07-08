@@ -1,6 +1,6 @@
 // GLOBAL VARIABLES
 const dbName = "financialdb";
-const dbAddr = `postgres://localhost/${dbName}`;
+const dbAddr = process.env.DATABASE_URL || `postgres://localhost/${dbName}`;
 
 module.exports = {
   dbAddr
