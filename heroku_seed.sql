@@ -1,7 +1,7 @@
-DROP DATABASE if exists financialdb;
-CREATE DATABASE financialdb;
-
-\c financialdb
+DROP TABLE if exists users;
+DROP TABLE if exists statements;
+DROP TABLE if exists goals;
+DROP TABLE if exists expenses;
 
 CREATE TABLE users
 (
