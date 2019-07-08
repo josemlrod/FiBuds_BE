@@ -4,8 +4,9 @@
   "description": "A financial app to keep track of expenses, set goals and meet them!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start:local": "$(npm bin)/nodemon index.js"
+    "test": "$(npm bin)/jest --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "start:local": "$(npm bin)/nodemon index.js",
+    "write-coveralls": "rm -rf .coveralls.yml && echo \"repo_token:$COVERAGE_TOKEN\" >> .coveralls.yml"
   },
   "author": "J",
   "license": "ISC",
@@ -17,6 +18,9 @@
     "pg-promise": "^8.7.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "coveralls": "^3.0.4",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
   }
 }
