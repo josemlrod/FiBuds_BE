@@ -1,7 +1,7 @@
-DROP TABLE if exists users;
-DROP TABLE if exists statements;
-DROP TABLE if exists goals;
-DROP TABLE if exists expenses;
+DROP TABLE if exists users CASCADE;
+DROP TABLE if exists statements CASCADE;
+DROP TABLE if exists goals CASCADE;
+DROP TABLE if exists expenses CASCADE;
 
 CREATE TABLE users
 (
