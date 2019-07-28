@@ -46,12 +46,12 @@ const getAllExpenses = async (request, response) => {
       fixed: await ExpenseService.getSpecificExpenses(
         user_id,
         statement_id,
-        "TRUE"
+        true,
       ),
       other: await ExpenseService.getSpecificExpenses(
         user_id,
         statement_id,
-        "FALSE"
+        false,
       )
     };
     response.status(200).json({
